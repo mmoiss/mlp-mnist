@@ -1,0 +1,10 @@
+# Planning Documents
+main.tex
+main.pdf
+
+# Large Input Data
+src/data/
+
+# Build Artifacts
+nn
+nn.exe
