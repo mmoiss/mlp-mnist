@@ -1,12 +1,18 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -O2
-LDLIBS = -lm
+LDLIBS = -lm -lOpenCL
 
-main: main.c
-	$(CC) $(CFLAGS) main.c -o nn $(LDLIBS)
+ifeq ($(OS),Windows_NT)
+	TARGET = nn.exe
+else
+	TARGET = nn
+endif
 
-run: main
-	./nn
+main: main.c cl_ops.c cl_ops.h
+	$(CC) $(CFLAGS) main.c cl_ops.c -o nn $(LDLIBS)
+
+run: $(TARGET)
+	./$(TARGET)
 
 data:
 	sh get-data.sh
