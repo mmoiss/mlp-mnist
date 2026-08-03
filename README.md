@@ -1,6 +1,6 @@
 # MLP for Handwritten Digits
 
-This project is a practice implementation of a neural network from scratch in C. It generally achieves an accuracy of ~97% within a single epoch. The implementation doesn't attempt to adopt scalability, although the dimension sizes of the parameters are available for modification.
+This project is a practice implementation of a neural network from scratch in C. It generally achieves an accuracy of ~98% with batch size of 100, 10 epochs and a learning rate of 0.3. The implementation doesn't attempt to adopt scalability, although the dimension sizes of the parameters are available for modification.
 
 This specific configuration adopts a 784 -> 128 -> 64 -> 10 architecture, which has been most commonly used for handwritten digit classification.
 
